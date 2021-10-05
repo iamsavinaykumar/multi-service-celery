@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  rabbit:
+    image: rabbitmq:latest
+    ports:
+      - 5672:5672
+  producer:
+    build:
+      context: ./producer
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - "RABBITMQ_HOST=rabbit"
+    links:
+      - rabbit
+  worker1:
+    build:
+      context: ./worker1
+      dockerfile: Dockerfile
+    environment:
+      - "RABBITMQ_HOST=rabbit"
+    links:
+      - rabbit
+      - producer
+  worker2:
+    build:
+      context: ./worker2
+      dockerfile: Dockerfile
+    environment:
+      - "RABBITMQ_HOST=rabbit"
+    links:
+      - rabbit
+      - producer
+  worker3:
+    build:
+      context: ./worker3
+      dockerfile: Dockerfile
+    environment:
+      - "RABBITMQ_HOST=rabbit"
+    links:
+      - rabbit
+      - producer
+      
