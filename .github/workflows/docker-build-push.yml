@@ -40,11 +40,11 @@ jobs:
           push: true
           tags: |
             iamsavinaykumar/multi-service-celery_producer:latest
-            iamsavinaykumar/multi-service-celery_producer:{{ $GITHUB_JOB }}
-            iamsavinaykumar/multi-service-celery_producer:{{ $GITHUB_RUN_NUMBER }}
+            iamsavinaykumar/multi-service-celery_producer:${{ env.GITHUB_JOB }}
+            iamsavinaykumar/multi-service-celery_producer:${{ env.GITHUB_RUN_NUMBER }}
             cr.skpd.io/multi-service-celery/producer:latest
-            cr.skpd.io/multi-service-celery/producer:{{ $GITHUB_JOB }}
-            cr.skpd.io/multi-service-celery/producer:{{ $GITHUB_RUN_NUMBER }}
+            cr.skpd.io/multi-service-celery/producer:${{ env.GITHUB_JOB }}
+            cr.skpd.io/multi-service-celery/producer:${{ env.GITHUB_RUN_NUMBER }}
   docker-build-push-monitor:
     runs-on: ubuntu-latest
     steps:
@@ -79,11 +79,11 @@ jobs:
           push: true
           tags: |
             iamsavinaykumar/multi-service-celery_monitor:latest
-            iamsavinaykumar/multi-service-celery_monitor:{{ $GITHUB_JOB }}
-            iamsavinaykumar/multi-service-celery_monitor:{{ $GITHUB_RUN_NUMBER }}
+            iamsavinaykumar/multi-service-celery_monitor:${{ env.GITHUB_JOB }}
+            iamsavinaykumar/multi-service-celery_monitor:${{ env.GITHUB_RUN_NUMBER }}
             cr.skpd.io/multi-service-celery/monitor:latest
-            cr.skpd.io/multi-service-celery/monitor:{{ $GITHUB_JOB }}
-            cr.skpd.io/multi-service-celery/monitor:{{ $GITHUB_RUN_NUMBER }}
+            cr.skpd.io/multi-service-celery/monitor:${{ env.GITHUB_JOB }}
+            cr.skpd.io/multi-service-celery/monitor:${{ env.GITHUB_RUN_NUMBER }}
   docker-build-push-worker1:
     runs-on: ubuntu-latest
     steps:
@@ -118,11 +118,11 @@ jobs:
           push: true
           tags: |
             iamsavinaykumar/multi-service-celery_worker1:latest
-            iamsavinaykumar/multi-service-celery_worker1:{{ $GITHUB_JOB }}
-            iamsavinaykumar/multi-service-celery_worker1:{{ $GITHUB_RUN_NUMBER }}
+            iamsavinaykumar/multi-service-celery_worker1:${{ env.GITHUB_JOB }}
+            iamsavinaykumar/multi-service-celery_worker1:${{ env.GITHUB_RUN_NUMBER }}
             cr.skpd.io/multi-service-celery/worker1:latest
-            cr.skpd.io/multi-service-celery/worker1:{{ $GITHUB_JOB }}
-            cr.skpd.io/multi-service-celery/worker1:{{ $GITHUB_RUN_NUMBER }}
+            cr.skpd.io/multi-service-celery/worker1:${{ env.GITHUB_JOB }}
+            cr.skpd.io/multi-service-celery/worker1:${{ env.GITHUB_RUN_NUMBER }}
   docker-build-push-worker2:
     runs-on: ubuntu-latest
     steps:
@@ -157,11 +157,11 @@ jobs:
           push: true
           tags: |
             iamsavinaykumar/multi-service-celery_worker2:latest
-            iamsavinaykumar/multi-service-celery_worker2:{{ $GITHUB_JOB }}
-            iamsavinaykumar/multi-service-celery_worker2:{{ $GITHUB_RUN_NUMBER }}
+            iamsavinaykumar/multi-service-celery_worker2:${{ env.GITHUB_JOB }}
+            iamsavinaykumar/multi-service-celery_worker2:${{ env.GITHUB_RUN_NUMBER }}
             cr.skpd.io/multi-service-celery/worker2:latest
-            cr.skpd.io/multi-service-celery/worker2:{{ $GITHUB_JOB }}
-            cr.skpd.io/multi-service-celery/worker2:{{ $GITHUB_RUN_NUMBER }}
+            cr.skpd.io/multi-service-celery/worker2:${{ env.GITHUB_JOB }}
+            cr.skpd.io/multi-service-celery/worker2:${{ env.GITHUB_RUN_NUMBER }}
   docker-build-push-worker3:
     runs-on: ubuntu-latest
     steps:
@@ -196,11 +196,11 @@ jobs:
           push: true
           tags: |
             iamsavinaykumar/multi-service-celery_worker3:latest
-            iamsavinaykumar/multi-service-celery_worker3:{{ $env.GITHUB_JOB }}
-            iamsavinaykumar/multi-service-celery_worker3:{{ $env.GITHUB_RUN_NUMBER }}
+            iamsavinaykumar/multi-service-celery_worker3:${{ env.GITHUB_JOB }}
+            iamsavinaykumar/multi-service-celery_worker3:${{ env.GITHUB_RUN_NUMBER }}
             cr.skpd.io/multi-service-celery/worker3:latest
-            cr.skpd.io/multi-service-celery/worker3:{{ $env.GITHUB_JOB }}
-            cr.skpd.io/multi-service-celery/worker3:{{ $env.GITHUB_RUN_NUMBER }}
+            cr.skpd.io/multi-service-celery/worker3:${{ env.GITHUB_JOB }}
+            cr.skpd.io/multi-service-celery/worker3:${{ env.GITHUB_RUN_NUMBER }}
       
       
       
