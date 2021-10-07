@@ -123,7 +123,7 @@ jobs:
             cr.skpd.io/multi-service-celery/worker1:latest
             cr.skpd.io/multi-service-celery/worker1:$GITHUB_JOB
             cr.skpd.io/multi-service-celery/worker1:$GITHUB_RUN_NUMBER    
-  docker-build-push-producer:
+  docker-build-push-worker2:
     runs-on: ubuntu-latest
     steps:
       -
@@ -162,7 +162,7 @@ jobs:
             cr.skpd.io/multi-service-celery/worker2:latest
             cr.skpd.io/multi-service-celery/worker2:$GITHUB_JOB
             cr.skpd.io/multi-service-celery/worker2:$GITHUB_RUN_NUMBER    
-  docker-build-push-producer:
+  docker-build-push-worker3:
     runs-on: ubuntu-latest
     steps:
       -
