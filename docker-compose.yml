@@ -12,6 +12,8 @@ services:
       - 8000:8000
     environment:
       - "RABBITMQ_HOST=rabbit"
+    volumes:
+      - ./producer:/app
     links:
       - rabbit
   worker1:
@@ -41,4 +43,20 @@ services:
     links:
       - rabbit
       - producer
-      
+  flower:
+    image: mher/flower
+    ports:
+      - 5555:5555
+    environment:
+      - CELERY_BROKER_URL=amqp://guest@rabbit:5672
+      - FLOWER_PORT=5555
+    links:
+      - rabbit
+  monitor:
+    build:
+      context: ./monitor
+      dockerfile: Dockerfile
+    environment:
+      - "RABBITMQ_HOST=rabbit"
+    links:
+      - rabbit
